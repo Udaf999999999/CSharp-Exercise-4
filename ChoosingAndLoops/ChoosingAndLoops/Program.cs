@@ -177,13 +177,42 @@ namespace ChoosingAndLoops
             //Console.WriteLine("Ваш возраст: {0}", user.age);
             //(string Name, string Type, int Age) Pet;
 
-            (string Name, string Type, double Age, int NameCount) Pet;
-            Console.WriteLine("Enter pet's name");
-            Pet.Name = Console.ReadLine();
-            Console.WriteLine("Enter pet's Type");
-            Pet.Type = Console.ReadLine();
-            bool isAgeCorrect = double.TryParse(Console.ReadLine(), out Pet.Age);
-            Pet.NameCount = Pet.Name.Length;
+            //(string Name, string Type, double Age, int NameCount) Pet;
+            //Console.WriteLine("Enter pet's name");
+            //Pet.Name = Console.ReadLine();
+            //Console.WriteLine("Enter pet's Type");
+            //Pet.Type = Console.ReadLine();
+            //bool isAgeCorrect = double.TryParse(Console.ReadLine(), out Pet.Age);
+            //Pet.NameCount = Pet.Name.Length;
+
+
+            var users = new (string Name, string Surname, string Login, int LoginLength, bool HavePet, double Age, string[] FavouriteColour)[3];
+
+            for (int i = 0; i < users.Length; i++)
+            {
+                Console.WriteLine("Enter your name");
+                users[i].Name = Console.ReadLine();
+                Console.WriteLine("Enter your Surname");
+                users[i].Surname = Console.ReadLine();
+                Console.WriteLine("Enter your Login");
+                users[i].Login = Console.ReadLine();
+                users[i].LoginLength = users[i].Login.Length;
+
+                Console.WriteLine("Do you have a pet. Yes/No");
+                string temphavePet = Console.ReadLine();
+                users[i].HavePet = temphavePet == "Yes" ? true : false;
+
+                Console.WriteLine("Enter your age");
+                bool isAgeCorrect = double.TryParse(Console.ReadLine(), out users[i].Age);
+
+                users[i].FavouriteColour = new string[3];
+                for (int j = 0; j < users[i].FavouriteColour.Length; j++)
+                {
+                    Console.WriteLine("Enter your " + (j + 1) + " favorite colour");
+                    users[i].FavouriteColour[j] = Console.ReadLine();
+                }
+            }
+
         }
     }
 }

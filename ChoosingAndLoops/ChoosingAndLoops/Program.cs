@@ -44,20 +44,34 @@
             //}
             //while (i<4);
 
-            Console.WriteLine("Write your name");
-            string userName = Console.ReadLine();
+            //Console.WriteLine("Write your name");
+            //string userName = Console.ReadLine();
 
-            for (int i = userName.Length - 1; i >= 0; i--)
-            {
-                Console.Write(userName[i] + " ");
-            }
+            //for (int i = userName.Length - 1; i >= 0; i--)
+            //{
+            //    Console.Write(userName[i] + " ");
+            //}
 
-            Console.WriteLine("Your name's reverse spalling");
-            foreach (var charUserName in userName)
+            //Console.WriteLine("Your name's reverse spalling");
+            //foreach (var charUserName in userName)
+            //{
+            //    Console.Write(charUserName + " ");
+            //}
+            //Console.Write("The last character of your name is " + userName[userName.Length - 1]);
+
+            int[,] array = { 
+                { 1, 2, 3},
+                { 1, 2, 3 },
+                { 1, 2, 3 },
+                { 5, 6, 7 } 
+            };
+            for (int i = 0; i < array.GetUpperBound(0) + 1; i++)//Столбцы
             {
-                Console.Write(charUserName + " ");
+                for (int k = 0; k < array.GetUpperBound(1) + 1; k++)//Строки
+                    Console.Write(array[i, k] + " ");
+
+                Console.WriteLine();
             }
-            Console.Write("The last character of your name is " + userName[userName.Length-1]);
 
 
         }

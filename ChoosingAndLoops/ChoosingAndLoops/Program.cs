@@ -44,26 +44,14 @@
             //}
             //while (i<4);
 
-            Console.WriteLine("Цикл while");
-            int k = 0;
-
-            while (k < 1)
+            Console.WriteLine("Write your name");
+            var userName = Console.ReadLine();
+            Console.WriteLine("Your name's spalling");
+            foreach (var charUserName in userName)
             {
-                Console.WriteLine(k);
-
-
-                k++;
+                Console.Write(charUserName + " ");
             }
-            Console.WriteLine("Do");
-            Console.WriteLine("Цикл do");
-            int t = 0;
-
-            do
-            {
-                Console.WriteLine(t);
-
-                t++;
-            } while (t < 1);
+            Console.Write("The last character of your name is " + userName[userName.Length-1]);
         }
     }
 }

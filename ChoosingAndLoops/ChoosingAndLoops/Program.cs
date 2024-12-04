@@ -59,20 +59,35 @@
             //}
             //Console.Write("The last character of your name is " + userName[userName.Length - 1]);
 
-            int[,] array = { 
-                { 1, 2, 3},
-                { 1, 2, 3 },
-                { 1, 2, 3 },
-                { 5, 6, 7 } 
-            };
-            for (int i = 0; i < array.GetUpperBound(0) + 1; i++)//Столбцы
-            {
-                for (int k = 0; k < array.GetUpperBound(1) + 1; k++)//Строки
-                    Console.Write(array[i, k] + " ");
+            //int[,] array = { { 1, 2, 3 }, { 5, 6, 7 }, { 8, 9, 10 }, { 11, 12, 13 } };
 
-                Console.WriteLine();
+            //for (int i = 0; i < array.GetUpperBound(1) + 1; i++)
+            //{
+            //    for (int j = 0; j < array.GetUpperBound(0) + 1; j++)
+            //        Console.Write(array[j, i] + " ");
+
+            //    Console.WriteLine();
+            //}
+
+            var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                for (int j = i+1; j < arr.Length; j++)
+                {
+                    if (arr[i] > arr[j])
+                    {
+                        int temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
             }
 
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.Write(arr[i] + " ");
+            }
 
         }
     }

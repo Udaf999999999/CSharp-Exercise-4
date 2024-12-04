@@ -113,11 +113,14 @@
             //    Console.WriteLine();
             //}
 
-            var arr = new int[] { 5, 6, 9, 1, 2, 3, 4, -5, 0 };
+            int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
             int count = 0;
-            foreach (int i in arr)
+            for (int i = 0; i < arr.GetLength(0); i++)
             {
-                count += i > 0 ? 1 : 0;
+                for (int j = 0; j < arr.GetLength(1); j++)
+                {
+                    count += arr[i, j] > 0 ? 1 : 0;
+                }
             }
             Console.WriteLine(count);
         }

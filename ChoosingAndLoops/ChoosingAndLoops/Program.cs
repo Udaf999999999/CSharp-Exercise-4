@@ -45,13 +45,21 @@
             //while (i<4);
 
             Console.WriteLine("Write your name");
-            var userName = Console.ReadLine();
-            Console.WriteLine("Your name's spalling");
+            string userName = Console.ReadLine();
+
+            for (int i = userName.Length - 1; i >= 0; i--)
+            {
+                Console.Write(userName[i] + " ");
+            }
+
+            Console.WriteLine("Your name's reverse spalling");
             foreach (var charUserName in userName)
             {
                 Console.Write(charUserName + " ");
             }
             Console.Write("The last character of your name is " + userName[userName.Length-1]);
+
+
         }
     }
 }

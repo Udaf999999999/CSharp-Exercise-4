@@ -69,26 +69,34 @@
             //    Console.WriteLine();
             //}
 
+            //var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    for (int j = i + 1; j < arr.Length; j++)
+            //    {
+            //        if (arr[i] > arr[j])
+            //        {
+            //            int temp = arr[i];
+            //            arr[i] = arr[j];
+            //            arr[j] = temp;
+            //        }
+            //    }
+            //}
+
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    Console.Write(arr[i] + " ");
+            //}
+
             var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
-
-            for (int i = 0; i < arr.Length; i++)
+            int sumArray = 0;
+            foreach (int i in arr)
             {
-                for (int j = i+1; j < arr.Length; j++)
-                {
-                    if (arr[i] > arr[j])
-                    {
-                        int temp = arr[i];
-                        arr[i] = arr[j];
-                        arr[j] = temp;
-                    }
-                }
+                sumArray += i;
             }
 
-            for (int i = 0; i < arr.Length; i++)
-            {
-                Console.Write(arr[i] + " ");
-            }
-
+            Console.WriteLine(sumArray);
         }
     }
 }

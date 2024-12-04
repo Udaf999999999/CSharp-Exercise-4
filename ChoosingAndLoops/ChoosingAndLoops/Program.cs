@@ -89,14 +89,29 @@
             //    Console.Write(arr[i] + " ");
             //}
 
-            var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
-            int sumArray = 0;
-            foreach (int i in arr)
-            {
-                sumArray += i;
-            }
+            //var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+            //int sumArray = 0;
+            //foreach (int i in arr)
+            //{
+            //    sumArray += i;
+            //}
 
-            Console.WriteLine(sumArray);
+            //Console.WriteLine(sumArray);
+
+            int[][] array = new int[3][];
+
+            array[0] = new int[2] { 1, 2 };
+            array[1] = new int[3] { 1, 2, 3 };
+            array[2] = new int[5] { 1, 2, 3, 4, 5 };
+
+            foreach (int[] arr in array)
+            {
+                foreach (int i in arr)
+                {
+                    Console.Write(i + " ");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }

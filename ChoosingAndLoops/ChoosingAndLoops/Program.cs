@@ -98,20 +98,28 @@
 
             //Console.WriteLine(sumArray);
 
-            int[][] array = new int[3][];
+            //int[][] array = new int[3][];
 
-            array[0] = new int[2] { 1, 2 };
-            array[1] = new int[3] { 1, 2, 3 };
-            array[2] = new int[5] { 1, 2, 3, 4, 5 };
+            //array[0] = new int[2] { 1, 2 };
+            //array[1] = new int[3] { 1, 2, 3 };
+            //array[2] = new int[5] { 1, 2, 3, 4, 5 };
 
-            foreach (int[] arr in array)
+            //foreach (int[] arr in array)
+            //{
+            //    foreach (int i in arr)
+            //    {
+            //        Console.Write(i + " ");
+            //    }
+            //    Console.WriteLine();
+            //}
+
+            var arr = new int[] { 5, 6, 9, 1, 2, 3, 4, -5, 0 };
+            int count = 0;
+            foreach (int i in arr)
             {
-                foreach (int i in arr)
-                {
-                    Console.Write(i + " ");
-                }
-                Console.WriteLine();
+                count += i > 0 ? 1 : 0;
             }
+            Console.WriteLine(count);
         }
     }
 }

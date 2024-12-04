@@ -162,20 +162,28 @@ namespace ChoosingAndLoops
             //    Console.WriteLine();
             //}
 
-            var (name, age) = ("Евгения", 27);
-            Console.WriteLine("Ваше имя: {0}", name);
-            Console.WriteLine("Ваш возраст: {0}", age);
-            (string name, int age) user;
+            //var (name, age) = ("Евгения", 27);
+            //Console.WriteLine("Ваше имя: {0}", name);
+            //Console.WriteLine("Ваш возраст: {0}", age);
+            //(string name, int age) user;
 
-            Console.WriteLine("Enter your name ");
-            user.name = Console.ReadLine();
-            Console.WriteLine("Enter your age in number");
-            bool isCorrectAge = int.TryParse(Console.ReadLine(), out user.age);
+            //Console.WriteLine("Enter your name ");
+            //user.name = Console.ReadLine();
+            //Console.WriteLine("Enter your age in number");
+            //bool isCorrectAge = int.TryParse(Console.ReadLine(), out user.age);
 
-            
-            Console.WriteLine("Ваше имя: {0}", user.name);
-            Console.WriteLine("Ваш возраст: {0}", user.age);
-            (string Name, string Type, int Age) Pet;
+
+            //Console.WriteLine("Ваше имя: {0}", user.name);
+            //Console.WriteLine("Ваш возраст: {0}", user.age);
+            //(string Name, string Type, int Age) Pet;
+
+            (string Name, string Type, double Age, int NameCount) Pet;
+            Console.WriteLine("Enter pet's name");
+            Pet.Name = Console.ReadLine();
+            Console.WriteLine("Enter pet's Type");
+            Pet.Type = Console.ReadLine();
+            bool isAgeCorrect = double.TryParse(Console.ReadLine(), out Pet.Age);
+            Pet.NameCount = Pet.Name.Length;
         }
     }
 }
